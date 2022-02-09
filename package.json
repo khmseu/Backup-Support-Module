@@ -1,0 +1,17 @@
+{
+  "name": "backup-support-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "node-gyp-build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "prebuildify --all --strip --napi"
+  },
+  "keywords": [],
+  "author": "Kai Henningsen <kai.extern@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "node-gyp-build": "^4.3.0"
+  }
+}
