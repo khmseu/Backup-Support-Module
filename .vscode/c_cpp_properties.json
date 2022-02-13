@@ -1,0 +1,51 @@
+{
+  "configurations": [
+    {
+      "name": "Linux",
+      "includePath": ["${workspaceFolder}/**", "/tmp/prebuildify/node/**"],
+      "defines": [
+        "__STDC_FORMAT_MACROS",
+        "_DEBUG",
+        "_FILE_OFFSET_BITS=64",
+        "_GLIBCXX_USE_CXX11_ABI=1",
+        "_LARGEFILE_SOURCE",
+        "BUILDING_NODE_EXTENSI",
+        "BUILDING_NODE_EXTENSION",
+        "DEBUG",
+        "NAPI_DISABLE_CPP_EXCEPTIONS",
+        "NODE_ADDON_API_DISABLE_DEPRECATED",
+        "NODE_ADDON_API_ENABLE_MAYBE",
+        "NODE_GYP_MODULE_NAME=deduba_os",
+        "OPENSSL_NO_PINSHARED",
+        "OPENSSL_THREADS",
+        "USING_UV_SHARED=1",
+        "USING_V8_SHARED=1",
+        "V8_DEPRECATION_WARNINGS",
+        "V8_DEPRECATION_WARNINGS=1",
+        "V8_ENABLE_CHEC",
+        "V8_IMMINENT_DEPRECATION_WARNINGS"
+      ],
+      "compilerPath": "/usr/bin/clang",
+      "cStandard": "c11",
+      "cppStandard": "c++14",
+      "intelliSenseMode": "linux-clang-x64",
+      "compilerArgs": [
+        "-fno-exceptions",
+        "-fno-omit-frame-pointer",
+        "-fno-rtti",
+        "-fPIC",
+        "-g",
+        "-m64",
+        "-O0",
+        "-O3",
+        "-pthread",
+        "-rdynamic",
+        "-std=gnu++17",
+        "-Wall",
+        "-Wextra",
+        "-Wno-unused-parameter"
+      ]
+    }
+  ],
+  "version": 4
+}

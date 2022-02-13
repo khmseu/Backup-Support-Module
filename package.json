@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "install": "node-gyp-build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "prebuildify --all --strip --napi"
+    "test": "node deduba_os.js",
+    "prebuild": "set -x; script -c '$( which prebuildify ) --napi'; : less -SR +G typescript"
   },
   "keywords": [],
   "author": "Kai Henningsen <kai.extern@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "node-addon-api": "^4.3.0",
     "node-gyp-build": "^4.3.0"
   }
 }

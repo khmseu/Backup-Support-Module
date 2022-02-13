@@ -1,18 +1,25 @@
 {
-  'targets': [
-    {
-      'target_name': "binding",
-      'sources': ["binding.cc"],
-#      'includes': ["../common.gypi"],
-    },
-  ],
-  'defines': ["V8_DEPRECATION_WARNINGS=1"],
-  'conditions': [
-    [
-      'OS in "linux freebsd openbsd solaris android aix cloudabi"',
-      {
-        'cflags': ["-Wno-cast-function-type"],
-      },
-    ],
-  ],
+    "targets": [
+        {
+            "target_name": "deduba_os",
+            "conditions": [
+                [
+                    'OS=="mac"',
+                    {
+                        "cflags+": ["-fvisibility=hidden"],
+                        "xcode_settings": {
+                            "GCC_SYMBOLS_PRIVATE_EXTERN": "YES",  # -fvisibility=hidden
+                        },
+                    },
+                ],
+            ],
+            "include_dirs+": ["<!(node -p \"require('node-addon-api').include_dir\")"],
+            "sources": ["deduba_os.cc"],
+            "defines+": [
+                "NAPI_DISABLE_CPP_EXCEPTIONS",
+                "NODE_ADDON_API_ENABLE_MAYBE",
+                "NODE_ADDON_API_DISABLE_DEPRECATED",
+            ],
+        }
+    ]
 }
