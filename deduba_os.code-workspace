@@ -4,5 +4,12 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"*.sip-log": "yaml",
+			"typescript": "plaintext",
+			"limits": "cpp",
+			"type_traits": "cpp"
+		}
+	}
 }

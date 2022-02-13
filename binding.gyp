@@ -14,7 +14,8 @@
                 ],
             ],
             "include_dirs+": ["<!(node -p \"require('node-addon-api').include_dir\")"],
-            "sources": ["deduba_os.cc"],
+            "sources": ["bz2.cc", "deduba_os.cc", "getxxxid.cc"],
+            "libraries": ["-lbz2"],
             "defines+": [
                 "NAPI_DISABLE_CPP_EXCEPTIONS",
                 "NODE_ADDON_API_ENABLE_MAYBE",
